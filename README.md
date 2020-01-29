@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/samuskitchen/go-cli-simple.svg?branch=master)](https://travis-ci.org/samuskitchen/go-cli-simple)
 
 
-This project is purely formative, it has been created to illustrate a simple CLI based on the article of a[blog](https://blog.friendsofgo.tech/posts/crear-tu-primer-cli-en-go/).
+This project is purely formative, it has been created to illustrate a simple CLI based on the article of a [blog](https://blog.friendsofgo.tech/posts/crear-tu-primer-cli-en-go/).
 
 This cli use the Banc Ipsum API for generate random texts and print in the output.
 
