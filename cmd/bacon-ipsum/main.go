@@ -8,13 +8,13 @@ import (
 	"github.com/samuskitchen/go-cli-simple/generator/bacon"
 )
 
-var appName = "bacon-ipsum"
+var appName = "go-cli-simple"
 
 func main() {
 	textTypePtr := flag.String("type", "", "Type of the text to generate (Required) [Valid options: all-meat, meat-and-filler]")
 	parasPtr := flag.Int("paras", 5, "number of paragraphs")
 	sentencesPtr := flag.Int("sentences", 0, "number of sentences (this overrides paragraphs)")
-	withLorem := flag.Bool("withLorem", false, "if it is true the first paragraph start with 'Bacon dolor sit amet'")
+	withLorem := flag.Bool("withLorem", false, "if it is true the first paragraph start with 'Bacon dolor sit amet (Carrots with bacon)'")
 
 	flag.Usage = usage
 
@@ -37,7 +37,7 @@ func main() {
 		*withLorem)
 
 	// Generate the text calling to the selected strategy
-	fmt.Println(g.GenerateText())
+	fmt.Println(g.GenerateBaconText())
 }
 
 func usage() {

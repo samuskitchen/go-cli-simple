@@ -4,13 +4,18 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/samuskitchen/go-cli-simple/generator"
-	model "github.com/samuskitchen/go-cli-simple/generator/bacon/model"
 	"log"
 	"net/http"
 	"strings"
 )
 
-type baconIpsum = *model.BaconIpsum
+// Bacon represent the filter to use on bacon-ipsum api
+type baconIpsum struct {
+	Type      TextType
+	Paras     int
+	Sentences int
+	WithLorem bool
+}
 
 type TextType string
 
@@ -64,7 +69,7 @@ func (b *baconIpsum) formatUrl() string {
 }
 
 // GenerateText generate a text based on bacon-ipsum API
-func (b *baconIpsum) GenerateText() string {
+func (b *baconIpsum) GenerateBaconText() string {
 	req, err := http.NewRequest("GET", b.formatUrl(), nil)
 	if err != nil {
 		log.Fatal("Error trying connect to bacon-ipsum API")
