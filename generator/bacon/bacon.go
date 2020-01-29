@@ -1,21 +1,16 @@
 package bacon
 
 import (
-	"github.com/samuskitchen/go-cli-simple/generator"
 	"encoding/json"
 	"fmt"
+	"github.com/samuskitchen/go-cli-simple/generator"
+	model "github.com/samuskitchen/go-cli-simple/generator/bacon/model"
 	"log"
 	"net/http"
 	"strings"
 )
 
-// Bacon represent the filter to use on bacon-ipsum api
-type baconIpsum struct {
-	Type      TextType
-	Paras     int
-	Sentences int
-	WithLorem bool
-}
+type baconIpsum = *model.BaconIpsum
 
 type TextType string
 
