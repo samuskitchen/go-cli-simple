@@ -11,7 +11,7 @@ This cli use the Banc Ipsum API for generate random texts and print in the outpu
 To install the library, run
 
 ```sh
-go get -u https://github.com/samuskitchen/go-cli-simple/cmd/bacon-ipsum
+go get -u github.com/samuskitchen/go-cli-simple/cmd/bacon-ipsum
 ```
 
 ## Use the cli
